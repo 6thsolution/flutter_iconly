@@ -1,10 +1,3 @@
-// Place fonts/Iconly-light.ttf in your fonts/ directory and
-// add the following to your pubspec.yaml
-// flutter:
-//   fonts:
-//    - family: Iconly-light
-//      fonts:
-//       - asset: fonts/Iconly-light.ttf
 import 'package:flutter/widgets.dart';
 
 class IconlyLight {
