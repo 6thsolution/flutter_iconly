@@ -20,3 +20,6 @@ flutter:
     - family: Iconly-Light
       fonts:
         - asset: assets/font/Iconly-Light.ttf
+    - family: Iconly-Bold
+      fonts:
+        - asset: assets/font/Iconly-Bold.ttf
