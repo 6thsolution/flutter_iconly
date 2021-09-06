@@ -1,16 +1,9 @@
-// Place fonts/Iconly-Bold.ttf in your fonts/ directory and
-// add the following to your pubspec.yaml
-// flutter:
-//   fonts:
-//    - family: Iconly-Bold
-//      fonts:
-//       - asset: fonts/Iconly-Bold.ttf
 import 'package:flutter/widgets.dart';
 
 class IconlyBold {
   IconlyBold._();
 
-  static const String _fontFamily = 'Iconly-Bold';
+  static const String _fontFamily = 'IconlyLight';
 
   static const IconData activity = IconData(0xe900, fontFamily: _fontFamily);
   static const IconData add_user = IconData(0xe901, fontFamily: _fontFamily);
