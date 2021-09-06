@@ -27,8 +27,7 @@ class HomePage extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
-            Icon(IconlyLight.arrow_down),
-            Icon(IconlyBold.arrow_down_circle),
+            Icon(IconlyBold.user_2),
           ],
         ),
       ),

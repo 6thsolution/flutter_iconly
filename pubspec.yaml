@@ -17,10 +17,7 @@ dev_dependencies:
 
 flutter:
   fonts:
-    - family: IconlyLight
-      fonts:
-        - asset: fonts/Iconly-Light.ttf
     - family: IconlyBold
       fonts:
-        - asset: fonts/Iconly-Bold.ttf
+        - asset: fonts/IconlyBold.ttf
         

@@ -3,7 +3,7 @@ import 'package:flutter/widgets.dart';
 class IconlyBold {
   IconlyBold._();
 
-  static const String _fontFamily = 'IconlyLight';
+  static const String _fontFamily = 'IconlyBold';
 
   static const IconData activity = IconData(0xe900, fontFamily: _fontFamily);
   static const IconData add_user = IconData(0xe901, fontFamily: _fontFamily);
