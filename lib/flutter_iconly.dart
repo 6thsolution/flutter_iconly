@@ -1,2 +1,0 @@
-library flutter_iconly;
-
