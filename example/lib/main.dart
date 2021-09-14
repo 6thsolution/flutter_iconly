@@ -28,6 +28,7 @@ class HomePage extends StatelessWidget {
         child: Column(
           children: [
             Icon(IconlyBold.user_2),
+            Icon(IconlyBroken.user_2),
           ],
         ),
       ),

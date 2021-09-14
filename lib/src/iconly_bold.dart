@@ -1,7 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:iconly/src/utils/constants.dart';
 
-/// Uses to generate IconData for Ionicons
 class BoldData extends IconData {
   static const String _fontFamily = 'IconlyBold';
 
@@ -15,7 +14,6 @@ class BoldData extends IconData {
 
 class IconlyBold {
   IconlyBold._();
-
 
   static const IconData activity = BoldData(0xe900);
   static const IconData add_user = BoldData(0xe901);
