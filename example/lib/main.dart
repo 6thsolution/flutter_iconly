@@ -26,9 +26,10 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Column(
-          children: [
+          children: const [
             Icon(IconlyBold.user_2),
             Icon(IconlyBroken.user_2),
+            Icon(IconlyLight.user),
           ],
         ),
       ),

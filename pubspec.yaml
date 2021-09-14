@@ -23,4 +23,7 @@ flutter:
     - family: IconlyBroken
       fonts:
         - asset: fonts/IconlyBroken.ttf
+    - family: IconlyLight
+      fonts:
+        - asset: fonts/IconlyLight.ttf
         
