@@ -25,11 +25,13 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Column(
+        child: Row(
+          mainAxisAlignment:  MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: const [
-            Icon(IconlyBold.user_2),
-            Icon(IconlyBroken.user_2),
-            Icon(IconlyLight.user),
+            Icon(IconlyBold.user_2,size: 64),
+            Icon(IconlyBroken.user_2,size: 64),
+            Icon(IconlyLight.user,size: 64),
           ],
         ),
       ),
