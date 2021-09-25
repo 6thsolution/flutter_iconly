@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:iconly/iconly.dart';
 
-
 void main() {
   runApp(const IconlyExampleApp());
 }
@@ -48,13 +47,11 @@ class _HomePageState extends State<HomePage> {
               ..clearSnackBars()
               ..showSnackBar(
                 const SnackBar(
-                  content: Text(
-                      'Select an Icon first. then you can copy it to clipboard'),
+                  content: Text('Select an Icon first. then you can copy it to clipboard'),
                 ),
               );
           } else {
-            final clipboardValue =
-                '${_selectedIcon!.type}.${_selectedIcon!.title}';
+            final clipboardValue = '${_selectedIcon!.type}.${_selectedIcon!.title}';
             Clipboard.setData(
               ClipboardData(text: clipboardValue),
             );
@@ -62,8 +59,7 @@ class _HomePageState extends State<HomePage> {
               ..clearSnackBars()
               ..showSnackBar(
                 SnackBar(
-                  content: Text(
-                      'Icon Has been copied to clipboard: $clipboardValue'),
+                  content: Text('Icon Has been copied to clipboard: $clipboardValue'),
                 ),
               );
           }
@@ -99,7 +95,7 @@ class _HomePageState extends State<HomePage> {
               },
             ),
             const SliverPadding(
-              padding:  EdgeInsets.only(top: 12.0),
+              padding: EdgeInsets.only(top: 12.0),
               sliver: SliverToBoxAdapter(child: SectionTitle(title: 'Bold')),
             ),
             IconSliverGrid(
@@ -123,7 +119,6 @@ class _HomePageState extends State<HomePage> {
               iconDetails: brokenIcons,
               selectedIcon: _selectedIcon,
               onTap: (tappedIcon) {
-                print('selected: $tappedIcon');
                 setState(() {
                   if (_selectedIcon == tappedIcon) {
                     _selectedIcon = null;
@@ -175,7 +170,6 @@ class IconSliverGrid extends SliverGrid {
           ),
         );
 }
-
 
 class SectionTitle extends StatelessWidget {
   const SectionTitle({

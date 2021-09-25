@@ -1,9 +1,7 @@
-
 import 'package:example/src/data/icon_detail.dart';
 import 'package:flutter/material.dart';
 
 const childAnimationDuration = Duration(milliseconds: 350);
-
 
 class IconItem extends StatefulWidget {
   const IconItem({
@@ -22,8 +20,7 @@ class IconItem extends StatefulWidget {
 class _IconItemState extends State<IconItem> {
   bool isHovered = false;
 
-  EdgeInsets get margin =>
-      isHovered ? const EdgeInsets.all(4) : const EdgeInsets.all(8);
+  EdgeInsets get margin => isHovered ? const EdgeInsets.all(4) : const EdgeInsets.all(8);
 
   @override
   void didUpdateWidget(covariant IconItem oldWidget) {
@@ -40,20 +37,18 @@ class _IconItemState extends State<IconItem> {
 
     final decoration = widget.selected
         ? BoxDecoration(
-            gradient:
-                LinearGradient(colors: [scheme.primary, scheme.primaryVariant]),
+            gradient: LinearGradient(colors: [scheme.primary, scheme.primaryVariant]),
             boxShadow: [
               BoxShadow(
                 color: scheme.primaryVariant,
                 blurRadius: 8,
-                offset: Offset(0, 4),
+                offset: const Offset(0, 4),
               ),
             ],
             borderRadius: BorderRadius.circular(18),
           )
         : BoxDecoration(
-            gradient:
-                LinearGradient(colors: [scheme.onPrimary, Colors.grey[200]!]),
+            gradient: LinearGradient(colors: [scheme.onPrimary, Colors.grey[200]!]),
             border: Border.all(
               color: scheme.primaryVariant.withOpacity(.3),
               width: 1.8,

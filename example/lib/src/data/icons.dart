@@ -8,31 +8,23 @@ final lightIcons = [
   IconlyDetail(type: 'IconlyLight', title: 'arrow_down', iconData: IconlyLight.arrow_down),
   IconlyDetail(type: 'IconlyLight', title: 'arrow_down_2', iconData: IconlyLight.arrow_down_2),
   IconlyDetail(type: 'IconlyLight', title: 'arrow_down_3', iconData: IconlyLight.arrow_down_3),
-  IconlyDetail(
-      type: 'IconlyLight', title: 'arrow_down_circle', iconData: IconlyLight.arrow_down_circle),
-  IconlyDetail(
-      type: 'IconlyLight', title: 'arrow_down_square', iconData: IconlyLight.arrow_down_square),
+  IconlyDetail(type: 'IconlyLight', title: 'arrow_down_circle', iconData: IconlyLight.arrow_down_circle),
+  IconlyDetail(type: 'IconlyLight', title: 'arrow_down_square', iconData: IconlyLight.arrow_down_square),
   IconlyDetail(type: 'IconlyLight', title: 'arrow_left', iconData: IconlyLight.arrow_left),
   IconlyDetail(type: 'IconlyLight', title: 'arrow_left_2', iconData: IconlyLight.arrow_left_2),
   IconlyDetail(type: 'IconlyLight', title: 'arrow_left_3', iconData: IconlyLight.arrow_left_3),
-  IconlyDetail(
-      type: 'IconlyLight', title: 'arrow_left_circle', iconData: IconlyLight.arrow_left_circle),
-  IconlyDetail(
-      type: 'IconlyLight', title: 'arrow_left_square', iconData: IconlyLight.arrow_left_square),
+  IconlyDetail(type: 'IconlyLight', title: 'arrow_left_circle', iconData: IconlyLight.arrow_left_circle),
+  IconlyDetail(type: 'IconlyLight', title: 'arrow_left_square', iconData: IconlyLight.arrow_left_square),
   IconlyDetail(type: 'IconlyLight', title: 'arrow_right', iconData: IconlyLight.arrow_right),
   IconlyDetail(type: 'IconlyLight', title: 'arrow_right_2', iconData: IconlyLight.arrow_right_2),
   IconlyDetail(type: 'IconlyLight', title: 'arrow_right_3', iconData: IconlyLight.arrow_right_3),
-  IconlyDetail(
-      type: 'IconlyLight', title: 'arrow_right_circle', iconData: IconlyLight.arrow_right_circle),
-  IconlyDetail(
-      type: 'IconlyLight', title: 'arrow_right_square', iconData: IconlyLight.arrow_right_square),
+  IconlyDetail(type: 'IconlyLight', title: 'arrow_right_circle', iconData: IconlyLight.arrow_right_circle),
+  IconlyDetail(type: 'IconlyLight', title: 'arrow_right_square', iconData: IconlyLight.arrow_right_square),
   IconlyDetail(type: 'IconlyLight', title: 'arrow_up', iconData: IconlyLight.arrow_up),
   IconlyDetail(type: 'IconlyLight', title: 'arrow_up_2', iconData: IconlyLight.arrow_up_2),
   IconlyDetail(type: 'IconlyLight', title: 'arrow_up_3', iconData: IconlyLight.arrow_up_3),
-  IconlyDetail(
-      type: 'IconlyLight', title: 'arrow_up_circle', iconData: IconlyLight.arrow_up_circle),
-  IconlyDetail(
-      type: 'IconlyLight', title: 'arrow_up_square', iconData: IconlyLight.arrow_up_square),
+  IconlyDetail(type: 'IconlyLight', title: 'arrow_up_circle', iconData: IconlyLight.arrow_up_circle),
+  IconlyDetail(type: 'IconlyLight', title: 'arrow_up_square', iconData: IconlyLight.arrow_up_square),
   IconlyDetail(type: 'IconlyLight', title: 'bag', iconData: IconlyLight.bag),
   IconlyDetail(type: 'IconlyLight', title: 'bag_2', iconData: IconlyLight.bag_2),
   IconlyDetail(type: 'IconlyLight', title: 'bookmark', iconData: IconlyLight.bookmark),
@@ -119,31 +111,23 @@ final brokenIcons = [
   IconlyDetail(type: 'IconlyBroken', title: 'arrow_down', iconData: IconlyBroken.arrow_down),
   IconlyDetail(type: 'IconlyBroken', title: 'arrow_down_2', iconData: IconlyBroken.arrow_down_2),
   IconlyDetail(type: 'IconlyBroken', title: 'arrow_down_3', iconData: IconlyBroken.arrow_down_3),
-  IconlyDetail(
-      type: 'IconlyBroken', title: 'arrow_down_circle', iconData: IconlyBroken.arrow_down_circle),
-  IconlyDetail(
-      type: 'IconlyBroken', title: 'arrow_down_square', iconData: IconlyBroken.arrow_down_square),
+  IconlyDetail(type: 'IconlyBroken', title: 'arrow_down_circle', iconData: IconlyBroken.arrow_down_circle),
+  IconlyDetail(type: 'IconlyBroken', title: 'arrow_down_square', iconData: IconlyBroken.arrow_down_square),
   IconlyDetail(type: 'IconlyBroken', title: 'arrow_left', iconData: IconlyBroken.arrow_left),
   IconlyDetail(type: 'IconlyBroken', title: 'arrow_left_2', iconData: IconlyBroken.arrow_left_2),
   IconlyDetail(type: 'IconlyBroken', title: 'arrow_left_3', iconData: IconlyBroken.arrow_left_3),
-  IconlyDetail(
-      type: 'IconlyBroken', title: 'arrow_left_circle', iconData: IconlyBroken.arrow_left_circle),
-  IconlyDetail(
-      type: 'IconlyBroken', title: 'arrow_left_square', iconData: IconlyBroken.arrow_left_square),
+  IconlyDetail(type: 'IconlyBroken', title: 'arrow_left_circle', iconData: IconlyBroken.arrow_left_circle),
+  IconlyDetail(type: 'IconlyBroken', title: 'arrow_left_square', iconData: IconlyBroken.arrow_left_square),
   IconlyDetail(type: 'IconlyBroken', title: 'arrow_right', iconData: IconlyBroken.arrow_right),
   IconlyDetail(type: 'IconlyBroken', title: 'arrow_right_2', iconData: IconlyBroken.arrow_right_2),
   IconlyDetail(type: 'IconlyBroken', title: 'arrow_right_3', iconData: IconlyBroken.arrow_right_3),
-  IconlyDetail(
-      type: 'IconlyBroken', title: 'arrow_right_circle', iconData: IconlyBroken.arrow_right_circle),
-  IconlyDetail(
-      type: 'IconlyBroken', title: 'arrow_right_square', iconData: IconlyBroken.arrow_right_square),
+  IconlyDetail(type: 'IconlyBroken', title: 'arrow_right_circle', iconData: IconlyBroken.arrow_right_circle),
+  IconlyDetail(type: 'IconlyBroken', title: 'arrow_right_square', iconData: IconlyBroken.arrow_right_square),
   IconlyDetail(type: 'IconlyBroken', title: 'arrow_up', iconData: IconlyBroken.arrow_up),
   IconlyDetail(type: 'IconlyBroken', title: 'arrow_up_2', iconData: IconlyBroken.arrow_up_2),
   IconlyDetail(type: 'IconlyBroken', title: 'arrow_up_3', iconData: IconlyBroken.arrow_up_3),
-  IconlyDetail(
-      type: 'IconlyBroken', title: 'arrow_up_circle', iconData: IconlyBroken.arrow_up_circle),
-  IconlyDetail(
-      type: 'IconlyBroken', title: 'arrow_up_square', iconData: IconlyBroken.arrow_up_square),
+  IconlyDetail(type: 'IconlyBroken', title: 'arrow_up_circle', iconData: IconlyBroken.arrow_up_circle),
+  IconlyDetail(type: 'IconlyBroken', title: 'arrow_up_square', iconData: IconlyBroken.arrow_up_square),
   IconlyDetail(type: 'IconlyBroken', title: 'bag', iconData: IconlyBroken.bag),
   IconlyDetail(type: 'IconlyBroken', title: 'bag_2', iconData: IconlyBroken.bag_2),
   IconlyDetail(type: 'IconlyBroken', title: 'bookmark', iconData: IconlyBroken.bookmark),
@@ -187,11 +171,9 @@ final brokenIcons = [
   IconlyDetail(type: 'IconlyBroken', title: 'more_square', iconData: IconlyBroken.more_square),
   IconlyDetail(type: 'IconlyBroken', title: 'notification', iconData: IconlyBroken.notification),
   IconlyDetail(type: 'IconlyBroken', title: 'paper', iconData: IconlyBroken.paper),
-  IconlyDetail(
-      type: 'IconlyBroken', title: 'paper_download', iconData: IconlyBroken.paper_download),
+  IconlyDetail(type: 'IconlyBroken', title: 'paper_download', iconData: IconlyBroken.paper_download),
   IconlyDetail(type: 'IconlyBroken', title: 'paper_fail', iconData: IconlyBroken.paper_fail),
-  IconlyDetail(
-      type: 'IconlyBroken', title: 'paper_negative', iconData: IconlyBroken.paper_negative),
+  IconlyDetail(type: 'IconlyBroken', title: 'paper_negative', iconData: IconlyBroken.paper_negative),
   IconlyDetail(type: 'IconlyBroken', title: 'paper_plus', iconData: IconlyBroken.paper_plus),
   IconlyDetail(type: 'IconlyBroken', title: 'paper_upload', iconData: IconlyBroken.paper_upload),
   IconlyDetail(type: 'IconlyBroken', title: 'password', iconData: IconlyBroken.password),
@@ -232,24 +214,18 @@ final boldIcons = [
   IconlyDetail(type: 'IconlyBold', title: 'arrow_down', iconData: IconlyBold.arrow_down),
   IconlyDetail(type: 'IconlyBold', title: 'arrow_down_2', iconData: IconlyBold.arrow_down_2),
   IconlyDetail(type: 'IconlyBold', title: 'arrow_down_3', iconData: IconlyBold.arrow_down_3),
-  IconlyDetail(
-      type: 'IconlyBold', title: 'arrow_down_circle', iconData: IconlyBold.arrow_down_circle),
-  IconlyDetail(
-      type: 'IconlyBold', title: 'arrow_down_square', iconData: IconlyBold.arrow_down_square),
+  IconlyDetail(type: 'IconlyBold', title: 'arrow_down_circle', iconData: IconlyBold.arrow_down_circle),
+  IconlyDetail(type: 'IconlyBold', title: 'arrow_down_square', iconData: IconlyBold.arrow_down_square),
   IconlyDetail(type: 'IconlyBold', title: 'arrow_left', iconData: IconlyBold.arrow_left),
   IconlyDetail(type: 'IconlyBold', title: 'arrow_left_2', iconData: IconlyBold.arrow_left_2),
   IconlyDetail(type: 'IconlyBold', title: 'arrow_left_3', iconData: IconlyBold.arrow_left_3),
-  IconlyDetail(
-      type: 'IconlyBold', title: 'arrow_left_circle', iconData: IconlyBold.arrow_left_circle),
-  IconlyDetail(
-      type: 'IconlyBold', title: 'arrow_left_square', iconData: IconlyBold.arrow_left_square),
+  IconlyDetail(type: 'IconlyBold', title: 'arrow_left_circle', iconData: IconlyBold.arrow_left_circle),
+  IconlyDetail(type: 'IconlyBold', title: 'arrow_left_square', iconData: IconlyBold.arrow_left_square),
   IconlyDetail(type: 'IconlyBold', title: 'arrow_right', iconData: IconlyBold.arrow_right),
   IconlyDetail(type: 'IconlyBold', title: 'arrow_right_2', iconData: IconlyBold.arrow_right_2),
   IconlyDetail(type: 'IconlyBold', title: 'arrow_right_3', iconData: IconlyBold.arrow_right_3),
-  IconlyDetail(
-      type: 'IconlyBold', title: 'arrow_right_circle', iconData: IconlyBold.arrow_right_circle),
-  IconlyDetail(
-      type: 'IconlyBold', title: 'arrow_right_square', iconData: IconlyBold.arrow_right_square),
+  IconlyDetail(type: 'IconlyBold', title: 'arrow_right_circle', iconData: IconlyBold.arrow_right_circle),
+  IconlyDetail(type: 'IconlyBold', title: 'arrow_right_square', iconData: IconlyBold.arrow_right_square),
   IconlyDetail(type: 'IconlyBold', title: 'arrow_up', iconData: IconlyBold.arrow_up),
   IconlyDetail(type: 'IconlyBold', title: 'arrow_up_2', iconData: IconlyBold.arrow_up_2),
   IconlyDetail(type: 'IconlyBold', title: 'arrow_up_3', iconData: IconlyBold.arrow_up_3),
