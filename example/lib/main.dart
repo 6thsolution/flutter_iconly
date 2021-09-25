@@ -1,6 +1,7 @@
 import 'package:example/src/data/icon_detail.dart';
 import 'package:example/src/data/icons.dart';
 import 'package:example/widget/icon_item.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:iconly/iconly.dart';
@@ -37,8 +38,14 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   IconlyDetail? _selectedIcon;
 
+  String _searchText = '';
+
   @override
   Widget build(BuildContext context) {
+    final lightData = _filterIcons(lightIcons);
+    final boldData = _filterIcons(boldIcons);
+    final brokenData = _filterIcons(brokenIcons);
+
     return Scaffold(
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () {
@@ -76,63 +83,100 @@ class _HomePageState extends State<HomePage> {
         padding: const EdgeInsets.symmetric(horizontal: 32),
         child: CustomScrollView(
           slivers: [
-            const SliverToBoxAdapter(child: SizedBox(height: 32)),
-            const SliverPadding(
-              padding: EdgeInsets.only(top: 12.0),
-              sliver: SliverToBoxAdapter(child: SectionTitle(title: 'Light')),
+            SliverAppBar(
+              backgroundColor: Colors.transparent,
+              shadowColor: Colors.transparent,
+              expandedHeight: 230,
+              pinned: false,
+              automaticallyImplyLeading: true,
+              flexibleSpace: FlexibleSpaceBar(
+                centerTitle: true,
+                collapseMode: CollapseMode.parallax,
+                titlePadding: const EdgeInsets.all(16),
+                background: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Image.asset('assets/image/banner.png'),
+                ),
+              ),
+              bottom: PreferredSize(
+                preferredSize: const Size.fromHeight(48),
+                child: CupertinoSearchTextField(
+                  onChanged: (value) {
+                    setState(() {
+                      _searchText = value;
+                    });
+                  },
+                ),
+              ),
             ),
-            IconSliverGrid(
-              iconDetails: lightIcons,
-              selectedIcon: _selectedIcon,
-              onTap: (tappedIcon) {
-                setState(() {
-                  if (_selectedIcon == tappedIcon) {
-                    _selectedIcon = null;
-                  } else {
-                    _selectedIcon = tappedIcon;
-                  }
-                });
-              },
-            ),
-            const SliverPadding(
-              padding: EdgeInsets.only(top: 12.0),
-              sliver: SliverToBoxAdapter(child: SectionTitle(title: 'Bold')),
-            ),
-            IconSliverGrid(
-              iconDetails: boldIcons,
-              selectedIcon: _selectedIcon,
-              onTap: (tappedIcon) {
-                setState(() {
-                  if (_selectedIcon == tappedIcon) {
-                    _selectedIcon = null;
-                  } else {
-                    _selectedIcon = tappedIcon;
-                  }
-                });
-              },
-            ),
-            const SliverPadding(
-              padding: EdgeInsets.only(top: 12.0),
-              sliver: SliverToBoxAdapter(child: SectionTitle(title: 'Bulk')),
-            ),
-            IconSliverGrid(
-              iconDetails: brokenIcons,
-              selectedIcon: _selectedIcon,
-              onTap: (tappedIcon) {
-                setState(() {
-                  if (_selectedIcon == tappedIcon) {
-                    _selectedIcon = null;
-                  } else {
-                    _selectedIcon = tappedIcon;
-                  }
-                });
-              },
-            ),
+            if (lightData.isNotEmpty) ...[
+              const SliverPadding(
+                padding: EdgeInsets.only(top: 24.0),
+                sliver: SliverToBoxAdapter(child: SectionTitle(title: 'Light')),
+              ),
+              IconSliverGrid(
+                iconDetails: lightData,
+                selectedIcon: _selectedIcon,
+                onTap: (tappedIcon) {
+                  setState(() {
+                    if (_selectedIcon == tappedIcon) {
+                      _selectedIcon = null;
+                    } else {
+                      _selectedIcon = tappedIcon;
+                    }
+                  });
+                },
+              ),
+            ],
+            if (boldData.isNotEmpty) ...[
+              const SliverPadding(
+                padding: EdgeInsets.only(top: 12.0),
+                sliver: SliverToBoxAdapter(child: SectionTitle(title: 'Bold')),
+              ),
+              IconSliverGrid(
+                iconDetails: boldData,
+                selectedIcon: _selectedIcon,
+                onTap: (tappedIcon) {
+                  setState(() {
+                    if (_selectedIcon == tappedIcon) {
+                      _selectedIcon = null;
+                    } else {
+                      _selectedIcon = tappedIcon;
+                    }
+                  });
+                },
+              ),
+            ],
+            if (brokenData.isNotEmpty) ...[
+              const SliverPadding(
+                padding: EdgeInsets.only(top: 12.0),
+                sliver: SliverToBoxAdapter(child: SectionTitle(title: 'Bulk')),
+              ),
+              IconSliverGrid(
+                iconDetails: brokenData,
+                selectedIcon: _selectedIcon,
+                onTap: (tappedIcon) {
+                  setState(() {
+                    if (_selectedIcon == tappedIcon) {
+                      _selectedIcon = null;
+                    } else {
+                      _selectedIcon = tappedIcon;
+                    }
+                  });
+                },
+              ),
+            ],
             const SliverToBoxAdapter(child: SizedBox(height: 32)),
           ],
         ),
       ),
     );
+  }
+
+  List<IconlyDetail> _filterIcons(List<IconlyDetail> baseData) {
+    return baseData
+        .where((icon) => _searchText.isEmpty || icon.title.toLowerCase().contains(_searchText.toLowerCase()))
+        .toList();
   }
 }
 
