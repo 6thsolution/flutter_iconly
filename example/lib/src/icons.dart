@@ -104,7 +104,7 @@ final lightIcons = [
   IconlyDetail(title: 'work', iconData: IconlyLight.work),
 ];
 
-final lightBroken = [
+final brokenIcons = [
   IconlyDetail(title: 'activity', iconData: IconlyBroken.activity),
   IconlyDetail(title: 'add_user', iconData: IconlyBroken.add_user),
   IconlyDetail(title: 'arrow_down', iconData: IconlyBroken.arrow_down),
@@ -207,7 +207,7 @@ final lightBroken = [
   IconlyDetail(title: 'work', iconData: IconlyBroken.work),
 ];
 
-final lightBold = [
+final boldIcons = [
   IconlyDetail(title: 'activity', iconData: IconlyBold.activity),
   IconlyDetail(title: 'add_user', iconData: IconlyBold.add_user),
   IconlyDetail(title: 'arrow_down', iconData: IconlyBold.arrow_down),
