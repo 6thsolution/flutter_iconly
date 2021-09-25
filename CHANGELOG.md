@@ -1,3 +1,7 @@
-## 0.0.1
+## 1.0.0
 
-* TODO: Describe initial release.
+* Initial release. In this version, we are supporting these icon sets:
+    * Light
+    * Bold
+    * Broken
+    
