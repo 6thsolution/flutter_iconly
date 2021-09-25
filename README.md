@@ -1,4 +1,5 @@
 ## Iconly
+[![pub](https://img.shields.io/pub/v/iconly.svg?color=blue&label=iconly)](https://github.com/6thsolution/flutter_iconly)
 <div align="center">
 <img width="80%" src="https://raw.githubusercontent.com/6thsolution/flutter_iconly/main/assets/image/transparent_banner.png" />
 </div>
