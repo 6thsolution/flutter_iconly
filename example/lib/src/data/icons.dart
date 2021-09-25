@@ -1,5 +1,6 @@
-import 'package:example/src/icon_detail.dart';
 import 'package:iconly/iconly.dart';
+
+import 'icon_detail.dart';
 
 final lightIcons = [
   IconlyDetail(type: 'IconlyLight', title: 'activity', iconData: IconlyLight.activity),

@@ -1,10 +1,10 @@
-import 'package:example/src/icon_detail.dart';
-import 'package:example/src/icons.dart';
+import 'package:example/src/data/icon_detail.dart';
+import 'package:example/src/data/icons.dart';
+import 'package:example/widget/icon_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:iconly/iconly.dart';
 
-const childAnimationDuration = Duration(milliseconds: 350);
 
 void main() {
   runApp(const IconlyExampleApp());
@@ -18,7 +18,7 @@ class IconlyExampleApp extends StatelessWidget {
     return MaterialApp(
       title: 'Iconly Example',
       theme: ThemeData(
-        colorScheme: ColorScheme.light(
+        colorScheme: const ColorScheme.light(
           primary: Color(0xff4e54c8),
           primaryVariant: Color(0xff8f94fb),
         ),
@@ -47,12 +47,14 @@ class _HomePageState extends State<HomePage> {
             ScaffoldMessenger.of(context)
               ..clearSnackBars()
               ..showSnackBar(
-                SnackBar(
-                  content: Text('Select an Icon first. then you can copy it to clipboard'),
+                const SnackBar(
+                  content: Text(
+                      'Select an Icon first. then you can copy it to clipboard'),
                 ),
               );
           } else {
-            final clipboardValue = '${_selectedIcon!.type}.${_selectedIcon!.title}';
+            final clipboardValue =
+                '${_selectedIcon!.type}.${_selectedIcon!.title}';
             Clipboard.setData(
               ClipboardData(text: clipboardValue),
             );
@@ -60,13 +62,14 @@ class _HomePageState extends State<HomePage> {
               ..clearSnackBars()
               ..showSnackBar(
                 SnackBar(
-                  content: Text('Icon Has been copied to clipboard: $clipboardValue'),
+                  content: Text(
+                      'Icon Has been copied to clipboard: $clipboardValue'),
                 ),
               );
           }
         },
         label: Row(
-          children: [
+          children: const [
             Icon(IconlyBroken.paper_plus),
             SizedBox(width: 4),
             Text('Copy'),
@@ -77,16 +80,15 @@ class _HomePageState extends State<HomePage> {
         padding: const EdgeInsets.symmetric(horizontal: 32),
         child: CustomScrollView(
           slivers: [
-            SliverToBoxAdapter(child: SizedBox(height: 32)),
-            SliverPadding(
-              padding: const EdgeInsets.only(top: 12.0),
+            const SliverToBoxAdapter(child: SizedBox(height: 32)),
+            const SliverPadding(
+              padding: EdgeInsets.only(top: 12.0),
               sliver: SliverToBoxAdapter(child: SectionTitle(title: 'Light')),
             ),
             IconSliverGrid(
               iconDetails: lightIcons,
               selectedIcon: _selectedIcon,
               onTap: (tappedIcon) {
-                print('selected: $tappedIcon');
                 setState(() {
                   if (_selectedIcon == tappedIcon) {
                     _selectedIcon = null;
@@ -96,15 +98,14 @@ class _HomePageState extends State<HomePage> {
                 });
               },
             ),
-            SliverPadding(
-              padding: const EdgeInsets.only(top: 12.0),
+            const SliverPadding(
+              padding:  EdgeInsets.only(top: 12.0),
               sliver: SliverToBoxAdapter(child: SectionTitle(title: 'Bold')),
             ),
             IconSliverGrid(
               iconDetails: boldIcons,
               selectedIcon: _selectedIcon,
               onTap: (tappedIcon) {
-                print('selected: $tappedIcon');
                 setState(() {
                   if (_selectedIcon == tappedIcon) {
                     _selectedIcon = null;
@@ -114,8 +115,8 @@ class _HomePageState extends State<HomePage> {
                 });
               },
             ),
-            SliverPadding(
-              padding: const EdgeInsets.only(top: 12.0),
+            const SliverPadding(
+              padding: EdgeInsets.only(top: 12.0),
               sliver: SliverToBoxAdapter(child: SectionTitle(title: 'Bulk')),
             ),
             IconSliverGrid(
@@ -132,7 +133,7 @@ class _HomePageState extends State<HomePage> {
                 });
               },
             ),
-            SliverToBoxAdapter(child: SizedBox(height: 32)),
+            const SliverToBoxAdapter(child: SizedBox(height: 32)),
           ],
         ),
       ),
@@ -148,7 +149,7 @@ class IconSliverGrid extends SliverGrid {
     ValueChanged<IconlyDetail>? onTap,
   }) : super(
           key: key,
-          gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+          gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
             maxCrossAxisExtent: 75,
             mainAxisSpacing: 0,
             crossAxisSpacing: 0,
@@ -175,84 +176,6 @@ class IconSliverGrid extends SliverGrid {
         );
 }
 
-class IconItem extends StatefulWidget {
-  const IconItem({
-    Key? key,
-    required this.icon,
-    this.selected = false,
-  }) : super(key: key);
-
-  final IconlyDetail icon;
-  final bool selected;
-
-  @override
-  _IconItemState createState() => _IconItemState();
-}
-
-class _IconItemState extends State<IconItem> {
-  bool isHovered = false;
-
-  EdgeInsets get margin => isHovered ? const EdgeInsets.all(4) : EdgeInsets.all(8);
-
-  @override
-  void didUpdateWidget(covariant IconItem oldWidget) {
-    if (widget.icon != oldWidget.icon) {
-      isHovered = false;
-    }
-
-    super.didUpdateWidget(oldWidget);
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    final theme = Theme.of(context);
-    final scheme = Theme.of(context).colorScheme;
-
-    final decoration = widget.selected
-        ? BoxDecoration(
-            gradient: LinearGradient(colors: [scheme.primary, scheme.primaryVariant]),
-            boxShadow: [
-              BoxShadow(
-                color: scheme.primaryVariant,
-                blurRadius: 8,
-                offset: Offset(0, 4),
-              ),
-            ],
-            borderRadius: BorderRadius.circular(18),
-          )
-        : BoxDecoration(
-            gradient: LinearGradient(colors: [scheme.onPrimary, Colors.grey[200]!]),
-            border: Border.all(
-              color: scheme.primaryVariant.withOpacity(.3),
-              width: 1.8,
-            ),
-            borderRadius: BorderRadius.circular(18),
-          );
-
-    return MouseRegion(
-      onEnter: (_) => entered(true),
-      onExit: (_) => entered(false),
-      child: AnimatedContainer(
-        duration: childAnimationDuration,
-        curve: Curves.ease,
-        margin: margin,
-        decoration: decoration,
-        child: Icon(
-          widget.icon.iconData,
-          color: widget.selected ? scheme.onPrimary : scheme.primary,
-        ),
-      ),
-    );
-  }
-
-  void entered(bool isEntered) {
-    if (isHovered != isEntered) {
-      setState(() {
-        isHovered = isEntered;
-      });
-    }
-  }
-}
 
 class SectionTitle extends StatelessWidget {
   const SectionTitle({
@@ -274,7 +197,7 @@ class SectionTitle extends StatelessWidget {
                 ),
           ),
         ),
-        Divider(),
+        const Divider(),
       ],
     );
   }
