@@ -11,6 +11,7 @@ class LightData extends IconData {
           fontPackage: packageName,
         );
 }
+
 class IconlyLight {
   IconlyLight._();
 

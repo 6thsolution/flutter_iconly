@@ -1,0 +1,34 @@
+{
+    "files.autoSave": "afterDelay",
+    "dart.lineLength": 120,
+    "[dart]": {
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "editor.selectionHighlight": false,
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        "editor.suggestSelection": "first",
+        "editor.tabCompletion": "onlySnippets",
+        "editor.wordBasedSuggestions": false,
+        "editor.defaultFormatter": "Dart-Code.dart-code",
+        "editor.rulers": [
+            120
+        ],
+    },
+    "dart.debugExternalLibraries": false,
+    "dart.debugSdkLibraries": false,
+    "todohighlight.isEnable": true,
+    "dart.flutterSdkPath": ".fvm/flutter_sdk",
+    // Remove .fvm files from search
+    "search.exclude": {
+        "**/.fvm": true
+    },
+    // Remove from file watching
+    "files.watcherExclude": {
+        "**/.fvm": true
+    },
+    "cSpell.words": [
+        "rekab",
+        "rxdart",
+        "sublist"
+    ]
+}
