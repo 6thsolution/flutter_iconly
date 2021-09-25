@@ -3,7 +3,9 @@
 <div align="center">
 <img width="80%" src="https://raw.githubusercontent.com/6thsolution/flutter_iconly/main/assets/image/transparent_banner.png" />
 </div>
-Flutter package for using [Iconly Icons](https://iconly.pro/ "Iconly Website"). Iconly is totally free, and you can use this package to bring these awesome icons to your Flutter project. 
+
+
+Flutter package for using [Iconly](https://iconly.pro)  Icons. Iconly is totally free, and you can use this package to bring these awesome icons to your Flutter project. 
 
 This package has made from Iconly v2.3 version. following sets are currently available in  this package:
 
