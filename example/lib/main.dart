@@ -1,6 +1,8 @@
 import 'package:example/src/icon_detail.dart';
 import 'package:example/src/icons.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:iconly/iconly.dart';
 
 const childAnimationDuration = Duration(milliseconds: 350);
 
@@ -16,10 +18,11 @@ class IconlyExampleApp extends StatelessWidget {
     return MaterialApp(
       title: 'Iconly Example',
       theme: ThemeData(
-          colorScheme: ColorScheme.light(
-        primary: Color(0xff4e54c8),
-        primaryVariant: Color(0xff8f94fb),
-      )),
+        colorScheme: ColorScheme.light(
+          primary: Color(0xff4e54c8),
+          primaryVariant: Color(0xff8f94fb),
+        ),
+      ),
       home: const HomePage(),
     );
   }
@@ -38,6 +41,38 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: () {
+          if (_selectedIcon == null) {
+            ScaffoldMessenger.of(context)
+              ..clearSnackBars()
+              ..showSnackBar(
+                SnackBar(
+                  content: Text('Select an Icon first. then you can copy it to clipboard'),
+                ),
+              );
+          } else {
+            final clipboardValue = '${_selectedIcon!.type}.${_selectedIcon!.title}';
+            Clipboard.setData(
+              ClipboardData(text: clipboardValue),
+            );
+            ScaffoldMessenger.of(context)
+              ..clearSnackBars()
+              ..showSnackBar(
+                SnackBar(
+                  content: Text('Icon Has been copied to clipboard: $clipboardValue'),
+                ),
+              );
+          }
+        },
+        label: Row(
+          children: [
+            Icon(IconlyBroken.paper_plus),
+            SizedBox(width: 4),
+            Text('Copy'),
+          ],
+        ),
+      ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 32),
         child: CustomScrollView(
