@@ -20,7 +20,7 @@ Add the following line to your `pubspec.yaml` file, under the `dependencies:` se
 
 ``` yaml
 dependencies:
-  font_awesome_flutter: <latest_version>
+  iconly: <latest_version>
 ```
 
 ## Usage 
@@ -38,3 +38,5 @@ class IconlyWidget extends StatelessWidget {
   
 }
 ```
+## Check the Example and find your Icon
+We have created a sample project where you can find the icon you want and add it to your project. you can also run the example folder on mobile platforms and web. [Checkout This Link for more info.](https://6thsolution.github.io/flutter_iconly)
